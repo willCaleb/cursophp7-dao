@@ -21,10 +21,18 @@ if(file_exists("config.php")){
 
 //Carrega um usuário usando o login e a senha
 
-$usuario = new Usuario();
-$usuario->login("Maria", "maria");
+//$usuario = new Usuario();
+//$usuario->login(" Mona", "senha");
 
-echo $usuario;
+//echo $usuario;
+
+$aluno = new Usuario();
+$aluno->setDeslogin("Aluno 3");
+$aluno->setDessenha("4321");
+
+$aluno->insert();
+
+echo json_encode($aluno);
 
 
  ?>
